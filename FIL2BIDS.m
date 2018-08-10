@@ -17,9 +17,9 @@ end
 
 %% 2. Untar directories
 mkdir(fullfile(source_dir, sequence_name));
-subj_id = source_dir(end-10:end);
+subj_id = source_dir(end-10:end-4);
 for i=1:length(sequence_idx)
-    untar(fullfile(source_dir, strcat(subj_id,'.S',num2str(sequence_idx(i)),'.tar')),...
+    untar(fullfile(source_dir, strcat(subj_id,'_FIL.S',num2str(sequence_idx(i)),'.tar')),...
         fullfile(source_dir, sequence_name));
 end
 
